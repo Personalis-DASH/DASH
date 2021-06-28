@@ -1,0 +1,74 @@
+##fileformat=VCFv4.1
+##FILTER=<ID=PASS,Description="Accept as a confident somatic mutation">
+##FILTER=<ID=REJECT,Description="Rejected as a confident somatic mutation">
+##FORMAT=<ID=AD,Number=.,Type=Integer,Description="Allelic depths for the ref and alt alleles in the order listed">
+##FORMAT=<ID=BQ,Number=A,Type=Float,Description="Average base quality for reads supporting alleles">
+##FORMAT=<ID=DP,Number=1,Type=Integer,Description="Approximate read depth (reads with MQ=255 or with bad mates are filtered)">
+##FORMAT=<ID=FA,Number=A,Type=Float,Description="Allele fraction of the alternate allele with regard to reference">
+##FORMAT=<ID=GQ,Number=1,Type=Integer,Description="Genotype Quality">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+##FORMAT=<ID=PL,Number=G,Type=Integer,Description="Normalized, Phred-scaled likelihoods for genotypes as defined in the VCF specification">
+##FORMAT=<ID=SS,Number=1,Type=Integer,Description="Variant status relative to non-adjacent Normal,0=wildtype,1=germline,2=somatic,3=LOH,4=post-transcriptional modification,5=unknown">
+##GATKCommandLine=<ID=MuTect,Version=2014.1-2.8.1-2-gaa2d8ac,Date="Sun Dec 08 00:53:32 PST 2019",Epoch=1575795212719,CommandLineOptions="analysis_type=MuTect input_file=[/per/ops/symphony/production/4494/109729/7444322/PIPELINE/Cancer_DNA_633682/Polysolver/type.hla_c_02_02_02.bam, /per/ops/symphony/production/4494/109729/7444322/PIPELINE/Cancer_DNA_633682/Polysolver/type.hla_c_02_02_02.tumor.bam] read_buffer_size=null phone_home=AWS gatk_key=null tag=NA read_filter=[] intervals=null excludeIntervals=null interval_set_rule=UNION interval_merging=ALL interval_padding=0 reference_sequence=/reference/env/qa/apps/polysolver/1.0.5-p3/data/complete/hla_c_02_02_02.fasta nonDeterministicRandomSeed=false disableDithering=false maxRuntime=-1 maxRuntimeUnits=MINUTES downsampling_type=BY_SAMPLE downsample_to_fraction=null downsample_to_coverage=1000 baq=OFF baqGapOpenPenalty=40.0 fix_misencoded_quality_scores=false allow_potentially_misencoded_quality_scores=false useOriginalQualities=false defaultBaseQualities=-1 performanceLog=null BQSR=null quantize_quals=0 disable_indel_quals=false emit_original_quals=false preserve_qscores_less_than=6 globalQScorePrior=-1.0 allow_bqsr_on_reduced_bams_despite_repeated_warnings=false validation_strictness=SILENT remove_program_records=false keep_program_records=false sample_rename_mapping_file=null unsafe=null disable_auto_index_creation_and_locking_when_reading_rods=false num_threads=1 num_cpu_threads_per_data_thread=1 num_io_threads=0 monitorThreadEfficiency=false num_bam_file_handles=null read_group_black_list=null pedigree=[] pedigreeString=[] pedigreeValidationType=STRICT allow_intervals_with_unindexed_bam=false generateShadowBCF=false variant_index_type=DYNAMIC_SEEK variant_index_parameter=-1 logging_level=INFO log_to_file=null help=false version=false noop=false enable_extended_output=false enable_qscore_output=false artifact_detection_mode=false tumor_sample_name=DNA_277782 bam_tumor_sample_name=null normal_sample_name=DNA_277780 force_output=false force_alleles=false only_passing_calls=false initial_tumor_lod=4.0 tumor_lod=6.3 fraction_contamination=0.02 minimum_mutation_cell_fraction=0.0 normal_lod=2.2 normal_artifact_lod=1.0 strand_artifact_lod=2.0 strand_artifact_power_threshold=0.9 dbsnp_normal_lod=5.5 minimum_normal_allele_fraction=0.0 tumor_f_pretest=0.005 min_qscore=5 gap_events_threshold=3 heavily_clipped_read_fraction=0.3 fraction_mapq0_threshold=0.5 pir_median_threshold=10.0 pir_mad_threshold=3.0 required_maximum_alt_allele_mapping_quality_score=20 max_alt_alleles_in_normal_count=2 max_alt_alleles_in_normal_qscore_sum=20 max_alt_allele_in_normal_fraction=0.03 power_constant_qscore=30 power_constant_af=0.30000001192092896 vcf=org.broadinstitute.sting.gatk.io.stubs.VariantContextWriterStub no_cmdline_in_header=org.broadinstitute.sting.gatk.io.stubs.VariantContextWriterStub sites_only=org.broadinstitute.sting.gatk.io.stubs.VariantContextWriterStub bcf=org.broadinstitute.sting.gatk.io.stubs.VariantContextWriterStub dbsnp=[] cosmic=[] normal_panel=[] coverage_20_q20_file=null power_file=null tumor_depth_file=null normal_depth_file=null filter_reads_with_N_cigar=false filter_mismatching_base_and_quals=false filter_bases_not_stored=false">
+##INFO=<ID=DB,Number=0,Type=Flag,Description="dbSNP Membership">
+##INFO=<ID=MQ0,Number=1,Type=Integer,Description="Total Mapping Quality Zero Reads">
+##INFO=<ID=SOMATIC,Number=0,Type=Flag,Description="Somatic event">
+##INFO=<ID=VT,Number=1,Type=String,Description="Variant type, can be SNP, INS or DEL">
+##contig=<ID=hla_c_02_02_02,length=3347>
+##reference=file:///reference/env/qa/apps/polysolver/1.0.5-p3/data/complete/hla_c_02_02_02.fasta
+##fileformat=VCFv4.1
+##INFO=<ID=SAMPLE,Number=1,Type=String,Description="Sample name">
+##INFO=<ID=TYPE,Number=1,Type=String,Description="Variant Type: SNV Insertion Deletion Complex">
+##INFO=<ID=DP,Number=1,Type=Integer,Description="Total Depth">
+##INFO=<ID=END,Number=1,Type=Integer,Description="Chr End Position">
+##INFO=<ID=VD,Number=1,Type=Integer,Description="Variant Depth">
+##INFO=<ID=AF,Number=1,Type=Float,Description="Allele Frequency">
+##INFO=<ID=SHIFT3,Number=1,Type=Integer,Description="No. of bases to be shifted to 3 prime for deletions due to alternative alignment">
+##INFO=<ID=MSI,Number=1,Type=Float,Description="MicroSattelite. > 1 indicates MSI">
+##INFO=<ID=MSILEN,Number=1,Type=Float,Description="MSI unit repeat length in bp">
+##INFO=<ID=SSF,Number=1,Type=Float,Description="P-value">
+##INFO=<ID=SOR,Number=1,Type=Float,Description="Odds ratio">
+##INFO=<ID=LSEQ,Number=G,Type=String,Description="5' flanking seq">
+##INFO=<ID=RSEQ,Number=G,Type=String,Description="3' flanking seq">
+##INFO=<ID=STATUS,Number=1,Type=String,Description="Somatic or germline status">
+##FILTER=<ID=q23,Description="Mean Base Quality Below 23">
+##FILTER=<ID=Q0,Description="Mean Mapping Quality Below 0">
+##FILTER=<ID=p5,Description="Mean Position in Reads Less than 5">
+##FILTER=<ID=SN1.5,Description="Signal to Noise Less than 1.5">
+##FILTER=<ID=Bias,Description="Strand Bias">
+##FILTER=<ID=pSTD,Description="Position in Reads has STD of 0">
+##FILTER=<ID=MAF0.05,Description="Matched sample has AF > 0.05, thus not somatic">
+##FILTER=<ID=d7,Description="Total Depth < 7">
+##FILTER=<ID=v4,Description="Var Depth < 4">
+##FILTER=<ID=f0.02,Description="Allele frequency < 0.02">
+##FILTER=<ID=P0.05,Description="Not significant with p-value > 0.05">
+##FILTER=<ID=DIFF0.2,Description="Non-somatic or LOH and allele frequency difference < 0.2">
+##FILTER=<ID=P0.01Likely,Description="Likely candidate but p-value > 0.01/5**vd2">
+##FILTER=<ID=InDelLikely,Description="Likely Indels are not considered somatic">
+##FILTER=<ID=MSI6,Description="Variant in MSI region with 6 non-monomer MSI or 10 monomer MSI">
+##FILTER=<ID=NM4,Description="Mean mismatches in reads >= 4, thus likely false positive">
+##FILTER=<ID=InGap,Description="The somatic variant is in the deletion gap, thus likely false positive">
+##FILTER=<ID=InIns,Description="The somatic variant is adjacent to an insertion variant">
+##FILTER=<ID=Cluster75bp,Description="Two somatic variants are within 75 bp">
+##FILTER=<ID=LongAT,Description="The somatic variant is flanked by long A/T (>=14)">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+##FORMAT=<ID=DP,Number=1,Type=Integer,Description="Total Depth">
+##FORMAT=<ID=VD,Number=1,Type=Integer,Description="Variant Depth">
+##FORMAT=<ID=AD,Number=2,Type=Integer,Description="Variant forward, reverse reads">
+##FORMAT=<ID=RD,Number=2,Type=Integer,Description="Reference forward, reverse reads">
+##FORMAT=<ID=AF,Number=1,Type=Float,Description="Allele Frequency">
+##FORMAT=<ID=ADJAF,Number=1,Type=Float,Description="Adjusted AF for indels due to local realignment">
+##FORMAT=<ID=BIAS,Number=1,Type=String,Description="Strand Bias Info">
+##FORMAT=<ID=PMEAN,Number=1,Type=Float,Description="Mean position in reads">
+##FORMAT=<ID=PSTD,Number=1,Type=Float,Description="Position STD in reads">
+##FORMAT=<ID=QUAL,Number=1,Type=Float,Description="Mean quality score in reads">
+##FORMAT=<ID=QSTD,Number=1,Type=Float,Description="Quality score STD in reads">
+##FORMAT=<ID=SBF,Number=1,Type=Float,Description="Strand Bias Fisher p-value">
+##FORMAT=<ID=ODDRATIO,Number=1,Type=Float,Description="Strand Bias Oddratio">
+##FORMAT=<ID=MQ,Number=1,Type=Float,Description="Mean Mapping Quality">
+##FORMAT=<ID=SN,Number=1,Type=Float,Description="Signal to noise">
+##FORMAT=<ID=HIAF,Number=1,Type=Float,Description="Allele frequency using only high quality bases">
+##FORMAT=<ID=NM,Number=1,Type=Float,Description="Mean mismatches in reads">
+##FILTER=<ID=TUMOR-ONLY-MODE,Description="Pass as somatic mutation when no matched normal available">
+##FILTER=<ID=RESCUED,Description="Rescued variant due to additional somatic filters and tools">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	DNA_277782	DNA_277780
